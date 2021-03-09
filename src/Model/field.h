@@ -16,9 +16,7 @@ class Field {
 
     public:
 
-        Field(){
-
-        }
+        Field()= default;
 
         //Creates a square field
         Field(int dimension){
@@ -27,14 +25,6 @@ class Field {
             this->length = dimension;
         }
 
-        /*//Creates a square field
-        Field(double area){
-
-            double dimension = sqrt(area);
-
-            dimension
-
-        }*/
 
         Field(int length, int width){
             this->length = length;
