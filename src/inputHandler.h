@@ -11,8 +11,6 @@ using namespace std;
  * optionNumber:
  * 1 - length
  * 2 - width
- * 3 - dimension for the square field
- * 4 - field type
  * return:
  * single number of wanted input or -1 in case of illegal argument
  * */
@@ -46,30 +44,6 @@ int inputNumber(int optionNumber){
 
             return userInput;
 
-        case 3:
-            cout << "Enter the dimension of the square field" << endl;
-            cin >> userInput;
-
-            while(userInput <= 0 || userInput > 100){
-                cout << "The dimension should be in range: [1;100]" << endl;
-                cout << "Please enter the dimension of the field once again" << endl;
-                cin >> userInput;
-            }
-
-            return userInput;
-
-        case 4:
-            cout << "Let's choose the type of field you want to play in!" << endl;
-            cout << "Please type 0 for square field and type 1 for rectangle" << endl;
-            cin >> userInput;
-
-            while(userInput < 0 || userInput > 1){
-                cout << "There's no such type of field ((" << endl;
-                cout << "Please type '0' for square field and type '1' for rectangle" << endl;
-                cin >> userInput;
-            }
-
-            return userInput;
 
         default:
             cout << "Invalid argument" << endl;

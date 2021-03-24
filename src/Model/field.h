@@ -8,15 +8,16 @@
 
 class Field {
 
-    public:
+    private:
         //size
-        int size;
+        int size = 0;
         int length;
         int width;
 
     public:
 
         Field()= default;
+
 
         //Creates a square field
         Field(int dimension){
@@ -32,8 +33,41 @@ class Field {
             this->size = length * width;
         }
 
+
         void print();
 
+
+        void setLength(int inputLength) {
+            Field::length = inputLength;
+
+            if(this->size == 0 && this->width != 0){
+                this->size = inputLength * this->width;
+            }
+        }
+
+
+        void setWidth(int inputWidth) {
+            Field::width = inputWidth;
+
+            if(this->size == 0 && this->length != 0){
+                this->size = inputWidth * this->length;
+            }
+        }
+
+
+        int getSize() const {
+            return size;
+        }
+
+
+        int getLength() const {
+            return length;
+        }
+
+
+        int getWidth() const {
+            return width;
+        }
 };
 
 #endif //SNAKEGAME_FIELD_H

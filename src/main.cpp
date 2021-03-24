@@ -8,21 +8,9 @@ using namespace std;
 int main() {
 
     cout << "Welcome to the snake game!" << endl;
-    int fieldType = inputNumber(4);
-    Field field{};
 
-    switch(fieldType){
+    int length = inputNumber(1);
+    int width = inputNumber(2);
 
-        case 0:
-            field.length = inputNumber(3);
-            field.width = field.length;
-            field.size = field.length*field.length;
-            break;
-
-        case 1:
-            field.length = inputNumber(1);
-            field.width = inputNumber(2);
-            field.size = field.length*field.width;
-            break;
-    }
+    Field field{length, width};
 }

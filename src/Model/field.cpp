@@ -11,6 +11,6 @@ void Field::print() {
 
     cout << endl;
     cout << "The size of the field is: " << this->size << endl;
-    cout << "The width of the field is: " << this->length << endl;
+    cout << "The length of the field is: " << this->length << endl;
     cout << "The width of the field is: " << this->width << endl;
 }
