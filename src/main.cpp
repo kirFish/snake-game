@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Model/field.h"
-#include "inputHandler.h"
+#include "model/field.h"
+#include "controller/input.h"
 
 using namespace std;
 
@@ -8,9 +8,9 @@ using namespace std;
 int main() {
 
     cout << "Welcome to the snake game!" << endl;
+    Field field{inputNumber(1), inputNumber(2)};
 
-    int length = inputNumber(1);
-    int width = inputNumber(2);
+    field.cleanUp();
 
-    Field field{length, width};
+    return 0;
 }

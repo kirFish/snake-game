@@ -5,6 +5,7 @@
 #ifndef SNAKEGAME_FIELD_H
 #define SNAKEGAME_FIELD_H
 
+#include "coordinate.h"
 
 class Field {
 
@@ -15,24 +16,17 @@ class Field {
         int width;
 
     public:
+        Coordinate** coordinates;
+
+    public:
 
         Field()= default;
 
 
-        //Creates a square field
-        Field(int dimension){
-            this->size = dimension * dimension;
-            this->width = dimension;
-            this->length = dimension;
-        }
+        Field(int length, int width);
 
 
-        Field(int length, int width){
-            this->length = length;
-            this->width = width;
-            this->size = length * width;
-        }
-
+        void cleanUp();
 
         void print();
 
@@ -42,6 +36,7 @@ class Field {
 
             if(this->size == 0 && this->width != 0){
                 this->size = inputLength * this->width;
+
             }
         }
 
@@ -68,6 +63,8 @@ class Field {
         int getWidth() const {
             return width;
         }
+
+
 };
 
 #endif //SNAKEGAME_FIELD_H

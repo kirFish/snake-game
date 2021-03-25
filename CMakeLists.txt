@@ -3,4 +3,4 @@ project(SnakeGame)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SnakeGame src/main.cpp src/Model/snake.cpp src/Model/snake.h src/Model/field.cpp src/Model/field.h src/Model/food.cpp src/Model/food.h src/Model/obstacle.cpp src/Model/obstacle.h src/Model/point.cpp src/Model/point.h src/inputHandler.h)
+add_executable(SnakeGame src/main.cpp src/model/snake.cpp src/model/snake.h src/model/field.cpp src/model/field.h src/model/food.cpp src/model/food.h src/model/obstacle.cpp src/model/obstacle.h src/model/coordinate.cpp src/model/coordinate.h src/controller/input.h src/view/console/viewBuilder.h)

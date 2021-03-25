@@ -1,7 +1,7 @@
 //This source file handles all input made by the user in different situations
 
-#ifndef SNAKEGAME_INPUTHANDLER_H
-#define SNAKEGAME_INPUTHANDLER_H
+#ifndef SNAKEGAME_INPUT_H
+#define SNAKEGAME_INPUT_H
 
 #include <iostream>
 using namespace std;
@@ -52,9 +52,4 @@ int inputNumber(int optionNumber){
 }
 
 
-int inputArray(){
-
-    return 0;
-}
-
-#endif //SNAKEGAME_INPUTHANDLER_H
+#endif //SNAKEGAME_INPUT_H
