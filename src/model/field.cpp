@@ -32,22 +32,7 @@ Field::Field(int length, int width) : length(length), width(width) {
     this->size =  length*width;
     this->coordinates = new Coordinate*[length];
 
-    for (int i = 0; i < length; ++i) {
+    for (int i = 0; i < length; ++i)
         this->coordinates[i] = new Coordinate[width];
-    }
-
-    for (int i = 0; i < length; i++)
-        for (int j = 0; j < width; j++)
-            this->coordinates[i][j] = Coordinate(true);
-
-    for (int i = 0; i < length; ++i) {
-        for (int j = 0; j < width; ++j) {
-//            printf(this->coordinates[i][j].isBusy ? " true " : " false ");
-            cout << "( " << i << ", " << j << " )";
-        }
-
-        cout<<endl;
-    }
-
 
 }

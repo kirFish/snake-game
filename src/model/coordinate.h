@@ -17,6 +17,8 @@ public:
 
     Coordinate(bool isBusy);
 
+    Coordinate(unsigned char x, unsigned char y);
+
 };
 
 #endif //SNAKEGAME_COORDINATE_H

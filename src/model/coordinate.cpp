@@ -5,3 +5,5 @@
 #include "coordinate.h"
 
 Coordinate::Coordinate(bool isBusy) : isBusy(isBusy) {}
+
+Coordinate::Coordinate(unsigned char x, unsigned char y) : x(x), y(y) {}
