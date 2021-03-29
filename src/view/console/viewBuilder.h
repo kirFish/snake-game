@@ -25,38 +25,42 @@ void drawField(Field field){
     for (int i = 0; i < field.getWidth(); ++i) {
         for (int j = 0; j < field.getLength(); ++j) {
 
-            if(i == 0 ){
-                if(j==0){
-                    cout << leftTopCorner;
-                }else if(j == lengthCoordinate){
-                    cout << rightTopCorner;
-                }else{
-                    cout << rotatedBorder;
-                }
-            }
-
+            //I had a problem with switch who can't use expressions in case
+            //that's why option here.  It's just not to make switch evaluate this
+            int option =  i;
             if(i == widthCoordinate){
-
-                if(j == 0){
-                    cout << leftBottomCorner;
-                }else if(j == lengthCoordinate){
-                    cout << rightBottomCorner;
-                }else{
-                    cout << rotatedBorder;
-                }
+                option = -1;
+            }
+            if ((j == 0 || j == lengthCoordinate) && i != 0 && i != widthCoordinate) {
+                option = -2;
             }
 
-            if(i > 0 && i < widthCoordinate) {
-                if (j == 0 || j == lengthCoordinate) {
+            switch(option){
+                case 0:
+                    if(j==0){
+                        cout << leftTopCorner;
+                    }else if(j == lengthCoordinate){
+                        cout << rightTopCorner;
+                    }else{
+                        cout << rotatedBorder;
+                    }
+                    break;
+                case -1:
+                    if(j == 0){
+                        cout << leftBottomCorner;
+                    }else if(j == lengthCoordinate){
+                        cout << rightBottomCorner;
+                    }else{
+                        cout << rotatedBorder;
+                    }
+                    break;
+                case -2:
                     cout << border;
-                }
+                    break;
+                default:
+                    cout << " ";
             }
 
-            if(i == 0 || i == widthCoordinate || (i < widthCoordinate && i > 0 && j == lengthCoordinate)){
-                cout << "";
-            }else{
-                cout << " ";
-            }
         }
 
         cout<<endl;

@@ -11,7 +11,7 @@ int main() {
     cout << "\n" << "Welcome to the snake game!"<< "\n" << endl;
 
 //    Field field{inputNumber(1), inputNumber(2)};
-    Field field{100,10};
+    Field field{100,15};
 
     drawField(field);
 
