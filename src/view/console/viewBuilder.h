@@ -8,6 +8,8 @@
 using namespace std;
 
 #include "model/field.h"
+#include <iostream>
+#include <string>
 
 const char rightBottomCorner  = 188;
 const char rightTopCorner  = 187;
@@ -16,8 +18,13 @@ const char leftTopCorner  = 201;
 const char border = 186;
 const char rotatedBorder  = 205;
 
+void clearScreen();
+void drawField(Field field);
+
 
 void drawField(Field field){
+
+    clearScreen();
 
     const int lengthCoordinate = field.getLength()-1;
     const int widthCoordinate = field.getWidth()-1;
@@ -66,5 +73,10 @@ void drawField(Field field){
         cout<<endl;
     }
 }
+
+void clearScreen() {
+    cout << string( 100, '\n' );
+}
+
 
 #endif //SNAKEGAME_VIEWBUILDER_H
